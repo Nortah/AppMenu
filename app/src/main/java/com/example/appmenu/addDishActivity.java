@@ -1,35 +1,34 @@
 package com.example.appmenu;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Database;
-import androidx.room.Room;
-import androidx.room.RoomDatabase;
-import androidx.room.RoomDatabase.*;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.Gallery;
 import android.widget.ImageView;
 
-import android.net.Uri;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.IOException;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 
 public class addDishActivity extends AppCompatActivity {
-    ImageView importedView;
+    ImageView importedImage;
+    Bitmap bitmap;
+    View view;
+    ByteArrayOutputStream bytearrayoutputstream;
+    File file;
+    FileOutputStream fileoutputstream;
     private static final int RESULT_LOAD_IMAGE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_dish);
 
-        importedView = (ImageView) findViewById(R.id.dishImage);
-        importedView.setImageURI(null);
+        importedImage = (ImageView) findViewById(R.id.dishImage);
 
     }
     //open the gallery
@@ -37,6 +36,7 @@ public class addDishActivity extends AppCompatActivity {
     {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+        System.out.println("I'm in import Image");
     }
     //Select the Image
     public void onImportResult(int requestCode, int resultCode, Intent data)
@@ -47,8 +47,9 @@ public class addDishActivity extends AppCompatActivity {
         if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && data == null)
         {
             selectedImage = data.getData();
-            importedView.setImageURI(selectedImage);
+            importedImage.setImageURI(selectedImage);
         }
+        System.out.println("I'm in on import Image");
     }
     //Add a dish in the database and brings you back to the data base
     public void addDish(View view){

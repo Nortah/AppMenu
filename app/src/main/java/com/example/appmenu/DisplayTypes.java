@@ -1,11 +1,11 @@
 package com.example.appmenu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DisplayTypes extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class DisplayTypes extends AppCompatActivity {
     }
 
     public void goToDisplayDishes(View view){
-        Intent intent = new Intent(this, DisplayDishes.class);
+        Intent intent = new Intent(this, addTypeActivity.class);
         startActivity(intent);
     }
 

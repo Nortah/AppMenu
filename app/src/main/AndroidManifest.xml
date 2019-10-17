@@ -46,7 +46,7 @@ package="com.example.appmenu">
         android:value=".DisplayDishes" />
 
     <activity
-        android:name=".addType"
+        android:name=".addTypeActivity"
         android:parentActivityName=".DisplayTypes"
         android:label="addType">
         <meta-data
