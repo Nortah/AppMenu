@@ -1,10 +1,13 @@
 package com.example.appmenu;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +20,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 public class addTypeActivity extends AppCompatActivity {
+    private static final int RESULT_LOAD_IMAGE = 1;
     ImageView importedImage;
     Bitmap bitmap;
     View view;
@@ -24,13 +28,16 @@ public class addTypeActivity extends AppCompatActivity {
     File file;
     FileOutputStream fileoutputstream;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_type);
 
         importedImage = (ImageView) findViewById(R.id.typeImage);
         bytearrayoutputstream = new ByteArrayOutputStream();
         TextView importImageText = (TextView)findViewById(R.id.ImportImageText) ;
+
+
         importImageText.setOnClickListener(new View.OnClickListener() {
 
 
@@ -44,7 +51,7 @@ public class addTypeActivity extends AppCompatActivity {
 
                 bitmap.compress(Bitmap.CompressFormat.PNG, 60, bytearrayoutputstream);
 
-                file = new File( Environment.getExternalStorageState() + "/SampleImage.png");
+                file = new File( Environment.getExternalStorageDirectory() + "/SampleImage.png");
 
                 try
 
@@ -71,6 +78,26 @@ public class addTypeActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void importImage(View view)
+    {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+        System.out.println("I'm in import Image");
+    }
+    //Select the Image
+    public void onImportResult(int requestCode, int resultCode, Intent data)
+    {
+        ImageView image = findViewById(R.id.dishImage);
+        Uri selectedImage = null;
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && data == null)
+        {
+            selectedImage = data.getData();
+            importedImage.setImageURI(selectedImage);
+        }
+        System.out.println("I'm in on import Image");
     }
 
 }
