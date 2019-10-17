@@ -21,14 +21,14 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:text="Modify Type"
+        android:text="Add Type"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#33C48D" />
 
 
     <ImageView
-        android:id="@+id/dishImage"
+        android:id="@+id/typeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-10dp"
@@ -39,6 +39,7 @@ android:orientation="vertical">
         app:srcCompat="@drawable/add_image" />
 
     <TextView
+        android:id="@+id/ImportImageText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Import dish image"
@@ -76,7 +77,7 @@ android:orientation="vertical">
         android:backgroundTint="#37B992"
         android:foregroundGravity="center_vertical"
         android:onClick="addDish"
-        android:text="ModifyType"
+        android:text="Add Type"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF" />
     <Button

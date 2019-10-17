@@ -1,7 +1,5 @@
 package com.example.appmenu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.BitmapShader;
 import android.graphics.Paint;
@@ -13,6 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DisplayTypes extends AppCompatActivity {
 
@@ -85,7 +85,7 @@ public class DisplayTypes extends AppCompatActivity {
     }
 
     public void goToDisplayDishes(View view){
-        Intent intent = new Intent(this, DisplayDishes.class);
+        Intent intent = new Intent(this, addTypeActivity.class);
         startActivity(intent);
     }
 
