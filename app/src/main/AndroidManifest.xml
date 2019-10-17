@@ -1,61 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
 package="com.example.appmenu">
 
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
 
-    <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-    <activity
-        android:name=".DisplayTypes"
-        android:parentActivityName=".MainActivity"
-        android:label="DisplayTypes">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+        <activity
+            android:name=".DisplayTypes"
+            android:parentActivityName=".MainActivity"
+            android:label="Food Type">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
 
-    </activity>
+        </activity>
 
-    <activity
-        android:name=".DisplayDishes"
-        android:parentActivityName=".DisplayTypes"
-        android:label="DisplayDishes">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".DisplayTypes" />
+        <activity
+            android:name=".DisplayDishes"
+            android:parentActivityName=".DisplayTypes"
+            android:label="DisplayDishes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayTypes" />
 
-    </activity>
+        </activity>
 
-    <activity
-        android:name=".addDish"
-        android:parentActivityName=".DisplayDishes"
-        android:label="addDish"/>
 
-    <meta-data
-        android:name="android.support.PARENT_ACTIVITY"
-        android:value=".DisplayDishes" />
 
-    <activity
-        android:name=".addType"
-        android:parentActivityName=".DisplayTypes"
-        android:label="addType">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".DisplayTypes" />
-
-    </activity>
-
-</application>
+    </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
