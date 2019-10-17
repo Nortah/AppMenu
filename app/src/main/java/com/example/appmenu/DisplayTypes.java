@@ -1,25 +1,22 @@
 package com.example.appmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class DisplayTypes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_display_types);
     }
 
-    public void goToDisplayTypes(View view){
-        Intent intent = new Intent(this, DisplayTypes.class);
+    public void goToDisplayDishes(View view){
+        Intent intent = new Intent(this, DisplayDishes.class);
         startActivity(intent);
     }
 
@@ -28,5 +25,4 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return  super.onCreateOptionsMenu(menu);
     }
-
 }

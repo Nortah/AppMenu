@@ -68,4 +68,7 @@
     <string name="orval">"Orval "</string>
     <string name="punkIPA">Punk IPA</string>
 
+
+    <string name="action_settings">settings</string>
+
 </resources>
