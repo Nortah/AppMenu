@@ -22,7 +22,7 @@ public class DisplayDishes extends AppCompatActivity
     }
 
     public void goToAddDishes(View view){
-        Intent intent = new Intent(this, addDish.class);
+        Intent intent = new Intent(this, addDishActivity.class);
         startActivity(intent);
     }
 }

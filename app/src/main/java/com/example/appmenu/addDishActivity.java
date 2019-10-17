@@ -20,9 +20,7 @@ import android.net.Uri;
 
 import java.io.IOException;
 
-public class addDish extends AppCompatActivity {
-
-    ImageViewToByteConverter conv = new ImageViewToByteConverter();
+public class addDishActivity extends AppCompatActivity {
     ImageView importedView;
     private static final int RESULT_LOAD_IMAGE = 1;
     @Override
@@ -56,7 +54,7 @@ public class addDish extends AppCompatActivity {
     public void addDish(View view){
         //return to previous page once you add the dish
         Intent intent = new Intent(this, DisplayDishes.class);
-        //build the database
+      /*  //build the database
         AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "Menu").build();
 
@@ -69,7 +67,7 @@ public class addDish extends AppCompatActivity {
         dish.setDishImage(dishImage);
 
         AppDatabase.AddDish(db, dish );
-
+*/
 
 
         startActivity(intent);
