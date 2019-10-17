@@ -1,0 +1,71 @@
+<resources>
+    <!-- login data -->
+    <string name="app_name">Menu</string>
+    <string name="Login">Login</string>
+    <string name="userName">User name</string>
+    <string name="password">Pasword</string>
+    <string name="connect_button">Log in</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- create, modify, remove -->
+    <string name="create_button">Add dish</string>
+    <string name="modify_button">Modify dish</string>
+    <string name="remove_button">Remove dish</string>
+    <string name="dishName">Name</string>
+    <string name="dishPicture">importPicture</string>
+    <string name="description">"Description "</string>
+    <!-- List of dishes -->
+    <string name="dishType">Dish Type</string>
+    <!-- Type of dish brut data -->
+    <string name="hotFood">Hot food</string>
+    <string name="pastas">Pastas</string>
+    <string name="pizzas">Pizzas</string>
+    <string name="burgers">Burgers</string>
+
+    <string name="coldFood">Cold food</string>
+    <string name="salads">Salads</string>
+    <string name="wraps">"Wraps "</string>
+    <string name="sandwiches">Sandwiches</string>
+
+    <string name="hotDrinks">Hot drinks</string>
+    <string name="coffees">"Coffees "</string>
+    <string name="Teas">"Teas "</string>
+
+    <string name="coldDrinks">Cold drinks</string>
+    <string name="sodas">"sodas "</string>
+    <string name="biers">"biers "</string>
+
+    <!-- Dish brut data -->
+
+    <string name="margarita">Margarita</string>
+    <string name="napoli">Napoli</string>
+
+    <string name="carbonara">Carbonara</string>
+    <string name="bolognese">Bolognese</string>
+
+    <string name="beefBurger">Beef burger</string>
+    <string name="beefCheeseburger">"Beef Cheeseburger "</string>
+
+    <string name="salad">Salad</string>
+
+    <string name="chickenWrap">Chicken wrap</string>
+    <string name="veggieWrap">"Veggie wrap "</string>
+
+    <string name="chickenSandwich">"Chicken sandwich "</string>
+    <string name="veggieSandwich">"Veggie sandwich "</string>
+
+    <string name="darkCoffee">Dark coffee</string>
+    <string name="cappuccino">"Cappuccino "</string>
+
+    <string name="blackTea">"Black tea "</string>
+    <string name="greenTea">Green tea</string>
+
+    <string name="drPepper">"Dr Pepper "</string>
+    <string name="rivella">Rivella </string>
+
+    <string name="orval">"Orval "</string>
+    <string name="punkIPA">Punk IPA</string>
+
+</resources>
