@@ -70,5 +70,6 @@
 
 
     <string name="action_settings">settings</string>
+    <string name="touch_screen">Touch the screen</string>
 
 </resources>

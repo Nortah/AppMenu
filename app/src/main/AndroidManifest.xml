@@ -37,7 +37,7 @@ package="com.example.appmenu">
     </activity>
 
     <activity
-        android:name=".addDish"
+        android:name=".addDishActivity"
         android:parentActivityName=".DisplayDishes"
         android:label="addDish"/>
 
