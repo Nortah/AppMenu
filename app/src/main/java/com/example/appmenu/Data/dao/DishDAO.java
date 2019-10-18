@@ -1,6 +1,10 @@
-package com.example.appmenu;
+package com.example.appmenu.Data.dao;
+
+import android.database.sqlite.SQLiteConstraintException;
 
 import androidx.room.*;
+
+import com.example.appmenu.Data.entity.Dish;
 
 import java.util.List;
 @Dao
@@ -17,9 +21,14 @@ public interface DishDAO
     public void insertAll (Dish...dishes);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void insertDish(Dish dish );
+    public void insertDish(Dish dish ) throws SQLiteConstraintException;
 
+    @Delete
+    public void update (Dish dish);
 
     @Delete
     public void delete (Dish dish);
+
+    @Query("DELETE FROM Dish")
+    void deleteAll();
 }

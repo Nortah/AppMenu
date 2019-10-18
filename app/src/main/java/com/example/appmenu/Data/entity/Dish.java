@@ -1,9 +1,9 @@
-package com.example.appmenu;
+package com.example.appmenu.Data.entity;
 
-import android.media.Image;
-import android.widget.ImageView;
-
-import androidx.room.*;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
 
 import static androidx.room.ForeignKey.CASCADE;
 @Entity(foreignKeys = @ForeignKey(entity = Type.class, parentColumns = "typeId",

@@ -1,4 +1,4 @@
-package com.example.appmenu;
+package com.example.appmenu.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appmenu.Navigation;
+import com.example.appmenu.R;
 
 public class DisplayTypes extends AppCompatActivity
 {
@@ -86,7 +89,7 @@ public class DisplayTypes extends AppCompatActivity
 //navigation methods
 
     public void goToAddTypeActivity(){
-        Intent intent = new Intent(this, modifyTypeActivity.class);
+        Intent intent = new Intent(this, addTypeActivity.class);
         startActivity(intent);
     }
     public void goToModifyTypeActivity(){

@@ -9,7 +9,7 @@ package="com.example.appmenu">
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
 
-    <activity android:name=".MainActivity">
+    <activity android:name=".ui.MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -17,50 +17,50 @@ package="com.example.appmenu">
     </activity>
 
     <activity
-        android:name=".DisplayTypes"
-        android:parentActivityName=".MainActivity"
+        android:name=".ui.DisplayTypes"
+        android:parentActivityName=".ui.MainActivity"
         android:label="Dishes Type">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:value=".ui.MainActivity" />
 
     </activity>
 
     <activity
-        android:name=".DisplayDishes"
-        android:parentActivityName=".DisplayTypes"
+        android:name=".ui.DisplayDishes"
+        android:parentActivityName=".ui.DisplayTypes"
         android:label="Dishes">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".DisplayTypes" />
+            android:value=".ui.DisplayTypes" />
 
     </activity>
     <activity
-        android:name=".addTypeActivity"
-        android:parentActivityName=".DisplayTypes"
+        android:name=".ui.addTypeActivity"
+        android:parentActivityName=".ui.DisplayTypes"
         android:label="Add type">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".DisplayTypes" />
+            android:value=".ui.DisplayTypes" />
 
     </activity>
 
     <activity
-        android:name=".addDishActivity"
-        android:parentActivityName=".DisplayDishes"
+        android:name=".ui.addDishActivity"
+        android:parentActivityName=".ui.DisplayDishes"
         android:label="addDish"/>
 
     <meta-data
         android:name="android.support.PARENT_ACTIVITY"
-        android:value=".DisplayDishes" />
+        android:value=".ui.DisplayDishes" />
 
     <activity
-        android:name=".modifyTypeActivity"
-        android:parentActivityName=".DisplayTypes"
+        android:name=".ui.modifyTypeActivity"
+        android:parentActivityName=".ui.DisplayTypes"
         android:label="Modify type">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".DisplayTypes" />
+            android:value=".ui.DisplayTypes" />
 
     </activity>
 

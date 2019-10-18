@@ -1,8 +1,9 @@
 package com.example.appmenu;
 
-import java.lang.reflect.Array;
+import com.example.appmenu.Data.AppDatabase;
+import com.example.appmenu.Data.entity.Dish;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class InsertAllDishes
 {

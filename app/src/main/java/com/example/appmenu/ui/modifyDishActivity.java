@@ -1,8 +1,10 @@
-package com.example.appmenu;
+package com.example.appmenu.ui;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appmenu.R;
 
 public class modifyDishActivity extends AppCompatActivity {
     @Override

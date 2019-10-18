@@ -1,10 +1,12 @@
-package com.example.appmenu;
+package com.example.appmenu.Data.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.example.appmenu.Data.entity.Type;
 
 import java.util.List;
 

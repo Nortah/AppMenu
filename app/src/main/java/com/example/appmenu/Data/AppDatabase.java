@@ -1,11 +1,13 @@
-package com.example.appmenu;
-
-import android.provider.BaseColumns;
+package com.example.appmenu.Data;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import java.util.Iterator;
+import com.example.appmenu.Data.dao.DishDAO;
+import com.example.appmenu.Data.entity.Dish;
+import com.example.appmenu.Data.entity.Type;
+import com.example.appmenu.Data.dao.TypeDAO;
+
 import java.util.List;
 
 @Database(entities = {Dish.class, Type.class}, version = 1, exportSchema = false)

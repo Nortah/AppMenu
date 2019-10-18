@@ -1,5 +1,8 @@
 package com.example.appmenu;
 
+import com.example.appmenu.Data.AppDatabase;
+import com.example.appmenu.Data.entity.Type;
+
 public class InsertAllTypes
 {
 

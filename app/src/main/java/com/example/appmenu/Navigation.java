@@ -4,6 +4,9 @@ import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.appmenu.ui.addTypeActivity;
+import com.example.appmenu.ui.modifyTypeActivity;
+
 public class Navigation extends AppCompatActivity
 {
     public void goToAddTypeActivity(){

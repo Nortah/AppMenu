@@ -1,4 +1,4 @@
-package com.example.appmenu;
+package com.example.appmenu.Data.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

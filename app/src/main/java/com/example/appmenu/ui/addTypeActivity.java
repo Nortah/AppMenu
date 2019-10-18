@@ -1,6 +1,5 @@
-package com.example.appmenu;
+package com.example.appmenu.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -15,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appmenu.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -100,7 +101,6 @@ public class addTypeActivity extends AppCompatActivity {
         System.out.println("I'm in on import Image");
     }
     public void addType(View view){
-        Activity parentClass = this.getParent();
         Intent intent = new Intent(this, DisplayTypes.class);
 
         startActivity(intent);

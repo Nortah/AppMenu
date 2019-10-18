@@ -1,4 +1,4 @@
-package com.example.appmenu;
+package com.example.appmenu.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appmenu.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

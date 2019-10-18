@@ -1,12 +1,13 @@
-package com.example.appmenu;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
+package com.example.appmenu.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appmenu.R;
 
 public class MainActivity extends AppCompatActivity {
 
