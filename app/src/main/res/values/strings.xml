@@ -71,5 +71,9 @@
 
     <string name="action_settings">settings</string>
     <string name="touch_screen">Touch the screen</string>
+    <string name="modify_type">modify type</string>
+    <string name="modify_dish">modify dish</string>
+    <string name="add_type">add type</string>
+    <string name="add_dish">add dish</string>
 
 </resources>

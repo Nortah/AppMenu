@@ -1,5 +1,6 @@
 package com.example.appmenu;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -73,7 +74,6 @@ public class addTypeActivity extends AppCompatActivity {
                     e.printStackTrace();
 
                 }
-
                 Toast.makeText(addTypeActivity.this, "Image Saved Successfully", Toast.LENGTH_LONG).show();
 
             }
@@ -98,6 +98,17 @@ public class addTypeActivity extends AppCompatActivity {
             importedImage.setImageURI(selectedImage);
         }
         System.out.println("I'm in on import Image");
+    }
+    public void addType(View view){
+        Activity parentClass = this.getParent();
+        Intent intent = new Intent(this, DisplayTypes.class);
+
+        startActivity(intent);
+    }
+    public void cancel(View view){
+        Intent intent = new Intent(this, DisplayTypes.class);
+
+        startActivity(intent);
     }
 
 }

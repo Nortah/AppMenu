@@ -1,10 +1,9 @@
 package com.example.appmenu;
 
 import android.content.Intent;
-import android.graphics.BitmapShader;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -14,8 +13,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DisplayTypes extends AppCompatActivity {
-
+public class DisplayTypes extends AppCompatActivity
+{
+    Navigation nav = new Navigation();
     ListView mListView;
 
 
@@ -83,15 +83,44 @@ public class DisplayTypes extends AppCompatActivity {
             return view;
         }
     }
+//navigation methods
 
-    public void goToDisplayDishes(View view){
-        Intent intent = new Intent(this, addTypeActivity.class);
+    public void goToAddTypeActivity(){
+        Intent intent = new Intent(this, modifyTypeActivity.class);
         startActivity(intent);
     }
+    public void goToModifyTypeActivity(){
+        Intent intent = new Intent(this, modifyTypeActivity.class);
+        startActivity(intent);
+    }
+
 
     public boolean onCreateOptionsMenu(Menu menu){
 
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return  super.onCreateOptionsMenu(menu);
+    }
+    //set menu options
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                // User chose the "Settings" item, show the app settings UI...
+                return true;
+
+            case R.id.action_add_type:
+                goToAddTypeActivity();
+                    return true;
+
+            case R.id.action_modify_type:
+                goToModifyTypeActivity();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }
